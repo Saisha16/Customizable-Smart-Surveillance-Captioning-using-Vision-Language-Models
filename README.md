@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ✨ Rule Engine - What You've Built (Complete Overview)
 
 ## 📋 Your Accomplishment Summary
@@ -339,3 +340,6 @@ Your code demonstrates:
 ---
 
 **You've built something impressive. Now own it! 🚀**
+=======
+# Customizable-Smart-Surveillance-Captioning-using-Vision-Language-Models
+>>>>>>> d77e8b3d68d805744bbaa0191f411eebe7083fc5

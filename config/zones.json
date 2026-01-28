@@ -1,0 +1,14 @@
+{
+  "zones": [
+    {
+      "name": "private_area",
+      "type": "restricted",
+      "polygon": [[50, 50], [300, 50], [300, 300], [50, 300]]
+    },
+    {
+      "name": "public_area",
+      "type": "public",
+      "polygon": [[0, 0], [640, 0], [640, 480], [0, 480]]
+    }
+  ]
+}
