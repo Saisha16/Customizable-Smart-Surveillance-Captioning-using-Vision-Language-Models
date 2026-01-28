@@ -1,0 +1,1 @@
+{"feedback_id": "FB-20260128173317-00001", "alert_id": "ALT-20260128103000-00001", "zone_id": "ZONE_A", "feedback_type": "VALID", "user_comment": "Alert correctly identified temperature anomaly", "timestamp": "2026-01-28T17:33:17.265786Z", "rule_id": "rule_1", "confidence_score": 0.95}
