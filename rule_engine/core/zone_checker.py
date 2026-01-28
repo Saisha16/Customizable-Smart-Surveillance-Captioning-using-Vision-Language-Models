@@ -1,4 +1,4 @@
-﻿import json
+import json
 
 class ZoneChecker:
     def __init__(self, zone_config_path):
@@ -24,6 +24,10 @@ class ZoneChecker:
         return inside
 
     def get_zone(self, bbox):
+        """
+        bbox: [x1, y1, x2, y2]
+        Uses bbox center for zone detection
+        """
         cx = int((bbox[0] + bbox[2]) / 2)
         cy = int((bbox[1] + bbox[3]) / 2)
 
