@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ✨ Rule Engine - What You've Built (Complete Overview)
 
 ## 📋 Your Accomplishment Summary
