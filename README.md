@@ -1,4 +1,4 @@
-# Customizable Smart Surveillance Captioning using Vision–Language Models
+<img width="941" height="627" alt="image" src="https://github.com/user-attachments/assets/a606bf6e-3a46-4934-9a1c-1eee8148b376" /># Customizable Smart Surveillance Captioning using Vision–Language Models
 
 ## Project Overview
 
@@ -105,8 +105,6 @@ At this stage, the system works as follows:
 3. Detection data is sent to the rule engine.
 4. The rule engine checks zone rules and cooldown conditions.
 5. Alerts and logs are generated when conditions are satisfied.
-
-![AI Surveillance System Architecture](docs/system_architecture.png)
 
 ---
 
