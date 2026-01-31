@@ -3,7 +3,7 @@
 
 ---
 
-## 🎯 The Big Picture (30 seconds elevator pitch)
+##  The Big Picture (30 seconds elevator pitch)
 
 We built a **Smart Security Alert System** with modular architecture that separates concerns between:
 - **ISHA**: The "Brain" - Makes intelligent decisions about threats
@@ -13,7 +13,7 @@ Think of it like a **security team**: One person analyzes threats (ISHA), anothe
 
 ---
 
-## 🏗️ System Architecture (Explain This First!)
+##  System Architecture (Explain This First!)
 
 ### The Three-Layer Design
 
@@ -48,11 +48,11 @@ Think of it like a **security team**: One person analyzes threats (ISHA), anothe
 
 ---
 
-## 🧠 ISHA's Role - The Logic Layer
+##  ISHA's Role - The Logic Layer
 
 ### What ISHA Does (Core Intelligence)
 
-#### 1️⃣ **Zone Management** (zones.json)
+#### 1️ **Zone Management** (zones.json)
 ```
 Real-world problem: "Where is the person?"
 
@@ -73,7 +73,7 @@ zones.json = [
 
 **Why**: Location context is crucial for threat assessment
 
-#### 2️⃣ **Zone Checker** (zone_checker.py)
+#### 2️ **Zone Checker** (zone_checker.py)
 ```
 Problem: "How do I know if (50, 75) is inside a polygon?"
 
@@ -86,7 +86,7 @@ Solution: Point-in-Polygon Algorithm (Ray Casting)
 Why it matters: Accuracy + Speed for real-time location tracking
 ```
 
-#### 3️⃣ **Rule Evaluator** (rule_evaluator.py)
+#### 3️ **Rule Evaluator** (rule_evaluator.py)
 ```
 Problem: "When should I trigger an alert?"
 
@@ -116,11 +116,11 @@ Solution: Cooldown System
 - Allow alerts if person leaves zone and returns
 
 Example:
-- t=0s: Alert triggered ✅ (first time)
-- t=30s: Same person, same action, same zone ❌ (blocked - cooldown active)
-- t=90s: Still same person, cooldown expired ✅ (allowed - can alert again)
+- t=0s: Alert triggered  (first time)
+- t=30s: Same person, same action, same zone  (blocked - cooldown active)
+- t=90s: Still same person, cooldown expired  (allowed - can alert again)
 - Person leaves zone
-- t=120s: Same person returns, new zone ✅ (allowed - new context)
+- t=120s: Same person returns, new zone  (allowed - new context)
 ```
 
 **Why**: Real systems get spammed otherwise. Smart throttling = better UX
@@ -150,7 +150,7 @@ After evaluating all rules and cooldowns, ISHA returns:
 
 ### What ISHTA Does (Data Flow + Learning)
 
-#### 1️⃣ **Input Handler** (input_handler.py)
+#### 1️ **Input Handler** (input_handler.py)
 ```
 Problem: "Raw data is messy - missing fields, wrong types, bad JSON"
 
@@ -170,7 +170,7 @@ Invalid? No → Return error message, reject
 Why: Garbage in = Garbage out. Clean validation early = fewer bugs later
 ```
 
-#### 2️⃣ **Alert Formatter** (alert_formatter.py)
+#### 2️ **Alert Formatter** (alert_formatter.py)
 ```
 Problem: "ISHA's decision needs context for downstream systems"
 
@@ -199,7 +199,7 @@ Solution: Structured Alert JSON with metadata
 - `rule_results`: Know which rules triggered (debugging)
 - `received_at`: Calculate end-to-end latency (SLAs)
 
-#### 3️⃣ **Feedback Manager** (feedback_manager.py) - The Learning Loop
+#### 3️ **Feedback Manager** (feedback_manager.py) - The Learning Loop
 ```
 Problem: "Alert said HIGH severity, but user says it was false positive.
          How do we improve next time?"
@@ -229,7 +229,7 @@ Over time:
 Why: System learns from real-world usage, continuously improves
 ```
 
-#### 4️⃣ **Logging System** (logging_system.py)
+#### 4️ **Logging System** (logging_system.py)
 ```
 Problem: "Need audit trail - What happened and when?"
 
@@ -251,7 +251,7 @@ Why: Compliance, debugging, performance analysis
 
 ---
 
-## 🔄 Complete Data Flow (Walk Through Example)
+##  Complete Data Flow (Walk Through Example)
 
 ### Scenario: Person detected in restricted zone at 2:30pm
 
@@ -374,7 +374,7 @@ STEP 10: USER FEEDBACK (RLHF Loop)
 
 ---
 
-## 🎓 Key Design Patterns (Interview Talking Points)
+##  Key Design Patterns (Interview Talking Points)
 
 ### 1. **Separation of Concerns**
 - **ISHA**: Pure logic, no I/O, no logging
@@ -408,7 +408,7 @@ STEP 10: USER FEEDBACK (RLHF Loop)
 
 ---
 
-## 📊 Scalability & Performance
+##  Scalability & Performance
 
 ### Why This Design Scales
 
@@ -430,7 +430,7 @@ STEP 10: USER FEEDBACK (RLHF Loop)
 
 ---
 
-## 🔐 Security & Reliability
+##  Security & Reliability
 
 ### Built-in Safety
 
@@ -442,7 +442,7 @@ STEP 10: USER FEEDBACK (RLHF Loop)
 
 ---
 
-## 🚀 How to Explain This in Interview
+##  How to Explain This in Interview
 
 ### Script (2-3 minutes)
 
@@ -475,7 +475,7 @@ A: "Cooldown manager is first line. But also, RLHF - user says false positive, r
 
 ---
 
-## 📁 File Structure Summary
+##  File Structure Summary
 
 ```
 rule_engine/
@@ -504,7 +504,7 @@ rule_engine/
 
 ---
 
-## 🎯 Summary: Why This Matters
+##  Summary: Why This Matters
 
 | Aspect | Why It's Good |
 |--------|---------------|
