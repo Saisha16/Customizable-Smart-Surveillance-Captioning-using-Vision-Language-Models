@@ -2,3 +2,9 @@ venv/
 __pycache__/
 runs/
 *.pt
+# Generated data (DO NOT COMMIT)
+data_preparation/raw_frames/
+data_preparation/clean_frames/
+data_preparation/motion_frames/
+data_preparation/clips/
+test_video.mp4
