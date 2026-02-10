@@ -4,7 +4,7 @@ import cv2
 
 app = FastAPI(title="YOLO Detection Service")
 
-model = YOLO("yolov8n.pt")
+model = YOLO("yolov10n.pt")
 
 @app.get("/")
 def health():
@@ -18,8 +18,7 @@ def detect():
 
     results = model.track(
         frame,
-        persist=True,
-        classes=[0]  # person only
+        persist=True
     )
 
     detections = []

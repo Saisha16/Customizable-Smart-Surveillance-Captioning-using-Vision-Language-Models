@@ -1,8 +1,8 @@
 import cv2
 from ultralytics import YOLO
 
-# Load YOLOv8 Nano model
-model = YOLO("yolov8n.pt")
+# Load YOLOv10 Nano model
+model = YOLO("yolov10n.pt")
 
 # Open webcam (0 = default camera)
 cap = cv2.VideoCapture(0)
@@ -13,11 +13,10 @@ while True:
         print("Failed to grab frame")
         break
 
-    # YOLO tracking (person class only)
+    # YOLO tracking (all objects)
     results = model.track(
         frame,
         persist=True,
-        classes=[0],  # 0 = person
         conf=0.5
     )
 
